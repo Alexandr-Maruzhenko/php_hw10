@@ -1,0 +1,147 @@
+* {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+
+.container__nav{
+  position: relative;
+  height: 100px;
+  width: 100%;
+}
+
+.container__nav ul {
+  position: relative;
+  width: 100%;
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+  display: flex;
+  justify-content: space-around;
+  /*border: solid 1px red;*/
+}
+.container__nav ul li {
+  list-style: none;
+  /*border: solid 1px green;*/
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*height: 100%;*/
+}
+.container__nav ul li a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #aaa;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.container__nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  /*background: #2196f3;*/
+  background: red;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.container__nav ul li a:hover {
+  color: #fff;
+}
+.container__nav ul li a:hover::before {
+  animation: animate .5s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+h1, h2{
+  text-align: center;
+}
+
+.footer__container{
+  position: relative;
+  /*display: flex;*/
+  width: 99%;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background-color: #ebebeb;
+}
+
+.footer__container .footer__content{
+  text-align: center;
+  color: cadetblue;
+  height: 100%;
+  line-height: 100px;
+  font-size: 24px;
+
+}
+
+.container__blog__content{
+  text-align: center;
+}
+
+.container__blog__content ul li a{
+  position: relative;
+  display: block;
+  margin: 10px;
+  padding: 5px 10px;
+  /*color: gold;*/
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+
+}
+
+.container__blog__content ul li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  /*background: red;*/
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.container__blog__content ul li a:hover {
+  /*color: #fff;*/
+  color: gold;
+}
+.container__blog__content ul li a::before {
+  animation: animate .5s linear forwards;
+}
